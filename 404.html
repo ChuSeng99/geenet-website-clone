@@ -5,12 +5,8 @@
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script>
-        // Redirect to the root with the original path as a hash or let the app handle it
         const path = window.location.pathname;
-        if (path !== '/geenet-website-clone/') {
-            window.history.replaceState({}, document.title, '/geenet-website-clone/');
-            window.location.reload();
-        }
+        window.location.href = window.location.origin + '/geenet-website-clone/#' + path;
     </script>
 </head>
 
