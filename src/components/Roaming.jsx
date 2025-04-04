@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Roaming = () => {
   return (
-		<div className="w-full text-center flex flex-col md:flex-row items-center justify-around bg-gray-200">
+		<div className="w-full text-center flex flex-col md:flex-row items-center justify-around">
 			<div className="max-w-lg flex flex-col gap-4">
 				<h2 className="text-6xl font-semibold text-left">
 					Exciting roaming data and local data in one place.
