@@ -5,6 +5,10 @@
     --font-roboto: "Roboto", sans-serif;
 }
 
+@utility text-gradient {
+    @apply bg-linear-to-b from-pink-200 to-pink-600 bg-clip-text text-transparent;
+}
+
 .slider {
     width: 1024px;
     max-width: 100vw;

@@ -1,4 +1,6 @@
 import React from 'react'
+import PlanCard from './PlanCard';
+import { plans } from '../constants/plans';
 
 const Plan = () => {
   return (
@@ -10,133 +12,18 @@ const Plan = () => {
 				a reliable communication.
 			</p>
 			<div className="grid gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-8">
-				<div className="bg-gray-400/40 px-6 py-8 rounded-2xl">
-					<h1 className="mb-4 flex items-start">
-						<span className="text-4xl relative top-3">$</span>
-						<span className="text-8xl">10</span>
-					</h1>
-					<p className="text-xs bg-pink-600 w-fit py-1 px-2 rounded-lg">
-						Best For Daily Usage
-					</p>
-					<hr className="my-4 border border-pink-300" />
-					<ul className="flex flex-col gap-2">
-						<li className="before:content-['✅'] before:mr-2">
-							200GB Local Data
-						</li>
-						<li className="flex items-start gap-2">
-							<span className="text-green-500">✅</span>
-							<span>
-								1GB Data Roaming <br /> (Malaysia/ Indonesia)
-							</span>
-						</li>
-						<li className="before:content-['✅'] before:mr-2">
-							1000 Local Mins
-						</li>
-						<li className="before:content-['✅'] before:mr-2">100 Local SMS</li>
-						<li className="before:content-['✅'] before:mr-2">
-							Unlimited Local Incoming Call
-						</li>
-						<li className="before:content-['✅'] before:mr-2">
-							Free Caller ID
-						</li>
-					</ul>
-				</div>
-				<div className="bg-pink-400/40 px-6 py-8 rounded-2xl">
-					<h1 className="mb-4 flex items-start">
-						<span className="text-4xl relative top-3">$</span>
-						<span className="text-8xl">10</span>
-					</h1>
-					<p className="text-xs bg-pink-600 w-fit py-1 px-2 rounded-lg">
-						Best For Daily Usage
-					</p>
-					<hr className="my-4 border border-pink-300" />
-					<ul className="flex flex-col gap-2">
-						<li className="before:content-['✅'] before:mr-2">
-							200GB Local Data
-						</li>
-						<li className="flex items-start gap-2">
-							<span className="text-green-500">✅</span>
-							<span>
-								1GB Data Roaming <br /> (Malaysia/ Indonesia)
-							</span>
-						</li>
-						<li className="before:content-['✅'] before:mr-2">
-							1000 Local Mins
-						</li>
-						<li className="before:content-['✅'] before:mr-2">100 Local SMS</li>
-						<li className="before:content-['✅'] before:mr-2">
-							Unlimited Local Incoming Call
-						</li>
-						<li className="before:content-['✅'] before:mr-2">
-							Free Caller ID
-						</li>
-					</ul>
-				</div>
-				<div className="bg-gray-400/40 px-6 py-8 rounded-2xl">
-					<h1 className="mb-4 flex items-start">
-						<span className="text-4xl relative top-3">$</span>
-						<span className="text-8xl">10</span>
-					</h1>
-					<p className="text-xs bg-pink-600 w-fit py-1 px-2 rounded-lg">
-						Best For Daily Usage
-					</p>
-					<hr className="my-4 border border-pink-300" />
-					<ul className="flex flex-col gap-2">
-						<li className="before:content-['✅'] before:mr-2">
-							200GB Local Data
-						</li>
-						<li className="flex items-start gap-2">
-							<span className="text-green-500">✅</span>
-							<span>
-								1GB Data Roaming <br /> (Malaysia/ Indonesia)
-							</span>
-						</li>
-						<li className="before:content-['✅'] before:mr-2">
-							1000 Local Mins
-						</li>
-						<li className="before:content-['✅'] before:mr-2">100 Local SMS</li>
-						<li className="before:content-['✅'] before:mr-2">
-							Unlimited Local Incoming Call
-						</li>
-						<li className="before:content-['✅'] before:mr-2">
-							Free Caller ID
-						</li>
-					</ul>
-				</div>
-				<div className="bg-gray-400/40 px-6 py-8 rounded-2xl">
-					<h1 className="mb-4 flex items-start">
-						<span className="text-4xl relative top-3">$</span>
-						<span className="text-8xl">10</span>
-					</h1>
-					<p className="text-xs bg-pink-600 w-fit py-1 px-2 rounded-lg">
-						Best For Daily Usage
-					</p>
-					<hr className="my-4 border border-pink-300" />
-					<ul className="flex flex-col gap-2">
-						<li className="before:content-['✅'] before:mr-2">
-							200GB Local Data
-						</li>
-						<li className="flex items-start gap-2">
-							<span className="text-green-500">✅</span>
-							<span>
-								1GB Data Roaming <br /> (Malaysia/ Indonesia)
-							</span>
-						</li>
-						<li className="before:content-['✅'] before:mr-2">
-							1000 Local Mins
-						</li>
-						<li className="before:content-['✅'] before:mr-2">100 Local SMS</li>
-						<li className="before:content-['✅'] before:mr-2">
-							Unlimited Local Incoming Call
-						</li>
-						<li className="before:content-['✅'] before:mr-2">
-							Free Caller ID
-						</li>
-					</ul>
-				</div>
+				{plans.map((plan) => (
+					<PlanCard 
+						key={plan.id}
+						tagline={plan.tagline}
+						price={plan.price}
+						features={plan.features}
+						isFeatured={plan.isFeatured}
+					/>
+				))}
 			</div>
 			<hr className="my-8 text-gray-400" />
-			<div className="w-full flex gap-10 justify-around">
+			<div className="w-full flex flex-col lg:flex-row gap-10 justify-around">
 				<button className="py-10 w-full bg-gradient-to-r from-pink-400 to-pink-600 rounded-lg text-lg hover:scale-105 hover:border-2 duration-150 cursor-pointer">
 					Sign-Up Online With Your Singpass 👉
 				</button>

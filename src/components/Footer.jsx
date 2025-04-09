@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-		<footer className="text-white bg-gradient-to-t from-gray-800 from-[80%] to-white to-[20%]">
+		<footer className="text-white bg-gradient-to-t from-gray-800 from-[85%] to-white to-[15%]">
 			<div className="bg-gradient-to-b from-gray-400 to-gray-600 w-1/2 mx-auto p-10 rounded-lg flex justify-between items-center">
 				<p className='text-2xl text-gray-200'>Get more updates on our social platforms</p>
 				<ul className="flex gap-4">
